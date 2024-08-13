@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useData } from "../../contexts/DataContext";
 import { getMonth } from "../../helpers/Date";
 
@@ -17,9 +17,7 @@ const Slider = () => {
       }
     }, 5000)
   }
-  useEffect(() => {
-    nextCard();
-  });
+  nextCard()
   return (
     <div className="SlideCardList">
       {byDateDesc?.map((event, idx) => (
